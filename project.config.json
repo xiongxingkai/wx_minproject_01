@@ -13,7 +13,7 @@
 		"coverView": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.9.0",
+	"libVersion": "2.9.3",
 	"appid": "wx1f5e844feba78e1b",
 	"projectname": "weiXinProject-1",
 	"debugOptions": {

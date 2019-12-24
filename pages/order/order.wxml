@@ -1,0 +1,18 @@
+<!--pages/order/order.wxml-->
+<view class="pageContainer">
+  <view>
+    <h1 class="title">订单页面</h1>
+  </view>
+  <view wx:for="{{orderList}}" wx:key="index">
+    <view>
+      <text class="name">{{item.name}}</text> ------- <text class="price">{{item.price}}</text> <text class="currency">元</text>
+    </view>
+  </view>
+  <view wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9]}}" wx:key="*this"  wx:for-item="i">
+    <view wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9]}}" wx:key="*this"  wx:for-item="j">
+      <view wx:if="{{i <= j}}">
+        {{i}} * {{j}} = {{i * j}}
+      </view>
+    </view>
+  </view>
+</view>

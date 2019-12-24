@@ -1,0 +1,17 @@
+<!--pages/map/map.wxml-->
+<view class="mapContainer">
+  <map id="myMap" class="mapComponent" markers="{{markersArray}}" polyline="{{polylineArray}}" polygons="{{polygonsArray}}" rotate="{{50}}" skew="{{30}}" enable-rotate show-compass show-scale show-location bindtap="handleMapTap" bindregionchange="handleRegionChange"
+  />
+
+  <button type="primary" bindtap="getCenterLocation">获取位置</button>
+  <button type="primary" bindtap="moveToLocation">移动位置</button>
+  <button type="primary" bindtap="translateMarker">移动标注</button>
+  <button type="primary" bindtap="includePoints">缩放视野展示所有经纬度</button>
+  <button type="primary" bindtap="getRegion">获取当前视野</button>
+  <button type="primary" bindtap="getRotate">获取当前的旋转角度</button>
+  <button type="primary" bindtap="getScale">获取当前的缩放比</button>
+  <button type="primary" bindtap="getSkew">获取当前的倾斜角度</button>
+  <button type="primary" bindtap="chooseImage">选择图片</button>
+  <button type="primary" bindtap="chooseMessageFile">选择文件</button>
+  <button type="primary" bindtap="chooseVideo">选择视频</button>
+</view>

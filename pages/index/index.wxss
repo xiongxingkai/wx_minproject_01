@@ -19,3 +19,16 @@
 .usermotto {
   margin-top: 200px;
 }
+.btnOperateArea {
+  padding: 10px;
+  text-align: left;
+  width: 80%;
+}
+.btnOperateArea button {
+  margin: 0 15px 15px 0;
+  display: inline-block;
+}
+.inputArea input {
+  border: 1px solid #ccc;
+  padding: 2px 5px;
+}

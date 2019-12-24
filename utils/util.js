@@ -14,6 +14,23 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+function getRandomNum(min, max) {
+  if (min > max) {
+    [min,max]=[max,min]
+  }
+  return Math.floor(Math.random()*(max-min)+min)
+}
+
+function getRandomColor() {
+  let arr = Array(3).fill(1).map(() => getRandomNum(0, 256).toString(16)).map(item => item.length>1? item: '0'+item)
+  return '#' + arr.join('')
+}
+function getRandomRGBColor() {
+  return 'rgba(' + getRandomNum(0, 256) + ',' + getRandomNum(0, 256) + ',' + getRandomNum(0, 256) + ',' + Math.random() + ')'
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  getRandomColor: getRandomColor,
+  getRandomRGBColor: getRandomRGBColor,
 }

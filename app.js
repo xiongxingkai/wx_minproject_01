@@ -1,6 +1,10 @@
 //app.js
 App({
-  onLaunch: function () {
+  onShow(options) {
+    console.log('小程序初次加载参数：', options)
+  },
+  onLaunch: function (options) {
+    console.log('小程序初始化参数：', options)
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -10,15 +14,18 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        console.log('登录成功', res)
       }
     })
     // 获取用户信息
     wx.getSetting({
       success: res => {
+        console.log('成功获取用户设置', res)
         if (res.authSetting['scope.userInfo']) {
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
             success: res => {
+              console.log('获取用户信息成功', res)
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo
 
@@ -33,7 +40,10 @@ App({
       }
     })
   },
+  onPageNotFound(e) {
+    console.log('跳转的页面不存在', e)
+  },
   globalData: {
     userInfo: null
-  }
+  },
 })

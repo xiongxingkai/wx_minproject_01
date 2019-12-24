@@ -1,0 +1,25 @@
+/* pages/order/order.wxss */
+.pageContainer {
+  padding: 100rpx;
+  background: #0ff;
+}
+.title {
+  font-size: 2em;
+  font-weight: bold;
+  color: #ff0;
+  padding: 1.5em;
+}
+.name {
+  font-size: 1.2em;
+  color: #f00;
+  font-weight: bold;
+}
+.price {
+  font-size: 1.2em;
+  color: #f0f;
+  font-weight: bold;
+}
+.currency {
+  font-size: 1.2em;
+  color: #fff;
+}

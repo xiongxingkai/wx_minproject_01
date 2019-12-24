@@ -7,7 +7,134 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
+  <view class="navigationArea border borderColor1">
+    <navigator url="/pages/editor/editor" open-type="navigate">跳转到富文本编辑器页面</navigator>
+    <navigator url="/pages/order/order" open-type="switchTab">切换到订单页面</navigator>
+    <navigator url="/pages/editor/editor" open-type="redirect">重定向富文本编辑器页面</navigator>
+    <!-- <navigator url="/pages/order/order" open-type="navigateBack">回退到订单页面</navigator> -->
+    <navigator url="/pages/logs/logs" open-type="reLaunch">重新加载日志页面</navigator>
+    <navigator url="/pages/audio/audio" open-type="navigate">跳转到音乐播放页面</navigator>
+    <navigator url="/pages/camera/camera" open-type="navigate">跳转到手机相机页面</navigator>
+    <!-- <navigator url="/pages/aa/aa" open-type="navigate">跳转到一个未知页面</navigator> -->
+    <navigator url="/pages/map/map" open-type="navigate">跳转到地图页面</navigator>
+  </view>
+  <view class="btnOperateArea">
+    <button type="primary" bindtap="handleStartLoading">开始加载</button>
+    <button type="primary" id="share-button" open-type="share">分享</button>
+    <button type="primary" bindtap="goToEditPage">跳转到富文本编辑器页面</button>
+  </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
+  </view>
+  <view class="btnOperateArea inputArea">
+    <input class="borderColor2" type="idcard" cursor-spacing="{{15}}" confirm-type="done" selection-start="{{10}}" selection-end="{{10}}" auto-focus hold-keyboard="{{false}}" adjust-position placeholder-style="color:#F76260" placeholder="将会自动获取焦点" />
+  </view>
+  <view class="btnOperateArea">
+    <view class="page">
+      <view class="page__hd">
+        <text class="page__title">slider</text>
+        <text class="page__desc">滑块</text>
+      </view>
+      <view class="page__bd">
+        <view class="section section_gap">
+          <text class="section__title">设置left/right icon</text>
+          <view class="body-view">
+            <slider bindchange="slider1change" left-icon="cancel" right-icon="success_no_circle" />
+          </view>
+        </view>
+
+        <view class="section section_gap">
+          <text class="section__title">设置step</text>
+          <view class="body-view">
+            <slider bindchange="slider2change" step="5" />
+          </view>
+        </view>
+
+        <view class="section section_gap">
+          <text class="section__title">显示当前value</text>
+          <view class="body-view">
+            <slider bindchange="slider3change" show-value/>
+          </view>
+        </view>
+
+        <view class="section section_gap">
+          <text class="section__title">设置最小/最大值</text>
+          <view class="body-view">
+            <slider bindchange="slider4change" min="50" max="200" show-value/>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="btnOperateArea">
+    <view class="section">
+      <textarea class="border borderColor3" bindblur="bindTextAreaBlur" auto-height placeholder="自动变高" />
+    </view>
+    <view class="section">
+      <textarea class="border borderColor3" placeholder="placeholder颜色是红色的" placeholder-style="color:red;" />
+    </view>
+    <view class="section">
+      <textarea class="border borderColor3" placeholder="这是一个可以自动聚焦的textarea" auto-focus />
+    </view>
+    <view class="section">
+      <textarea class="border borderColor3" placeholder="这个只有在按钮点击的时候才聚焦" focus="{{focus}}" />
+      <view class="btn-area">
+        <button bindtap="bindButtonTap">使得输入框获取焦点</button>
+      </view>
+    </view>
+    <view class="section">
+      <form bindsubmit="bindFormSubmit">
+        <textarea class="border borderColor3" placeholder="form 中的 textarea" name="textarea" />
+        <button form-type="submit"> 提交 </button>
+      </form>
+    </view>
+    <view>
+      <button type="primary" bindtap="getSystemInfo">获取系统信息</button>
+    </view>
+    <view>
+      <button type="primary" bindtap="getLaunchInfo">获取小程序信息</button>
+    </view>
+    <view>
+      <button type="primary" bindtap="toUnkenowPage">调用js跳转到一个不存在的未知页面</button>
+    </view>
+    <view>
+      <button type="primary" bindtap="naviagteToAudio">跳转到音频页面</button>
+    </view>
+    <view>
+      <button type="primary" bindtap="showToast">显示提示弹框</button>
+    </view>
+    <view>
+      <button type="primary" bindtap="showModal">显示确认弹框</button>
+    </view>
+    <view>
+      <button type="primary" bindtap="showLoading">显示Loading弹框</button>
+    </view>
+    <view>
+      <button type="primary" bindtap="showActionSheet">显示按钮组弹框</button>
+    </view>
+    <view>
+      <button type="primary" bindtap="showNavigationBarLoading">显示导航栏加载动画</button>
+    </view>
+    <view>
+      <button type="primary" bindtap="setNavigationBarColor">动态设置导航栏颜色</button>
+    </view>
+    <view>
+      <button type="primary" bindtap="showTabBarRedDot">显示第二个tab菜单右上角红点</button>
+    </view>
+    <view>
+      <button type="primary" bindtap="hideTabBar">隐藏底部tab菜单</button>
+    </view>
+    <view>
+      <button type="primary" bindtap="setTabBarStyle">动态设置底部tab菜单样式</button>
+    </view>
+    <view>
+      <button type="primary" bindtap="setTabBarItem">动态设置底部tab第二个菜单</button>
+    </view>
+    <view>
+      <button type="primary" bindtap="setTabBarBadge">动态设置tab第三个菜单右上角文字</button>
+    </view>
+    <view>
+      <button type="primary" bindtap="loadFontFace">下载字体</button>
+    </view>
   </view>
 </view>

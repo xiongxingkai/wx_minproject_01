@@ -1,0 +1,8 @@
+/* pages/map/map.wxss */
+.mapContainer {
+  padding: 20rpx;
+}
+.mapComponent{
+  width: 100%;
+  height: 250px;
+}

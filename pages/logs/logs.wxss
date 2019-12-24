@@ -6,3 +6,10 @@
 .log-item {
   margin: 10rpx;
 }
+.progressContainer {
+  width: 100%;
+  margin: 0 0 25px 0;
+}
+.progressContainer progress {
+  margin-bottom: 2em;
+}

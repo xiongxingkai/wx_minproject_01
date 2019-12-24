@@ -1,6 +1,72 @@
 <!--logs.wxml-->
+<page-meta
+  background-text-style="{{bgTextStyle}}"
+  background-color="{{bgColor}}"
+  background-color-top="{{bgColorTop}}"
+  background-color-bottom="{{bgColorBottom}}"
+  scroll-top="{{scrollTop}}"
+  page-style="color: green"
+  root-font-size="16px"
+>
+  <navigation-bar
+    title="{{nbTitle}}"
+    loading="{{nbLoading}}"
+    front-color="{{nbFrontColor}}"
+    background-color="{{nbBackgroundColor}}"
+  />
+</page-meta>
 <view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
+  <block wx:for="{{logs}}" wx:for-item="log" wx:key="index">
+    <text selectable="{{true}}" class="log-item">{{index + 1}}. {{log}}</text>
   </block>
+  <cover-view>
+    <cover-image src="http://images.juheapi.com/jztk/a1b1subject1/1.jpg" bindload="handleImageLoad"></cover-image>
+  </cover-view>
+  <movable-area style="height: 200px; width: 200px; background: #0ff;">
+    <movable-view style="height: 50px; width: 50px; background: #ff0;" x="{{x}}" y="{{y}}" direction="all" bindchange="onChange">
+    </movable-view>
+  </movable-area>
+  <view class="btn-area">
+    <button size="mini" bindtap="tap">click me to move to (30px, 30px)</button>
+  </view>
+  <view >movable-view区域大于movable-area</view>
+  <movable-area style="height: 100px; width: 100px; background: #0ff;">
+    <movable-view style="height: 200px; width: 200px; background: #ff0;" direction="all" bindchange="onChange">
+    </movable-view>
+  </movable-area>
+  <view>可放缩</view>
+  <movable-area style="height: 200px; width: 200px; background: #0ff;" scale-area>
+    <movable-view style="height: 50px; width: 50px; background: #ff0;" direction="all" bindchange="onChange" bindscale="onScale"
+      scale scale-min="0.5" scale-max="4" scale-value="2">
+    </movable-view>
+  </movable-area>
+  <view class="progressContainer">
+    <progress percent="20" show-info active />
+    <progress percent="40" stroke-width="12" active show-info />
+    <progress percent="60" color="#f0f" active show-info />
+    <progress percent="80" active show-info />
+  </view>
+  <view class="progressContainer">
+    <button type="primary" open-type="feedback" bindlaunchapp="handleLaunchApp" bindgetuserinfo="handleGetUserInfo" 
+      bindcontact="handleContact" bindgetphonenumber="handlePhoneNumber" binderror="handleError"
+      loading="{{true}}">测试按钮</button>
+  </view>
+  <view class="progressContainer">
+    <checkbox-group bindchange="checkboxChange">
+      <label class="checkbox" wx:for="{{countries}}" wx:key="*this">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+      </label>
+    </checkbox-group>
+  </view>
+  <view class="progressContainer">
+    <label class="checkbox" >
+        <checkbox value="basketball" bindchange="checkboxChange"  checked="true"/>篮球
+    </label>
+    <label class="checkbox" >
+        <checkbox  bindchange="checkboxChange"  checked="{{isChecked}}"/>足球
+    </label>
+    <button type="primary" bindtap="checkedIsChecked">检查是否选中</button>
+  </view>
+
+  
 </view>

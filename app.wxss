@@ -1,4 +1,7 @@
 /**app.wxss**/
+page {
+  overflow-y: auto!important;
+}
 .container {
   height: 100%;
   display: flex;
@@ -8,3 +11,38 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+.mainBgColor {
+  background: #FDF6E3;
+}
+.color1 {
+  color: #FE6056;
+}
+.color2 {
+  color: #F8BF32;
+}
+.color3 {
+  color: #2AC83C;
+}
+.border {
+  border: 1px solid #ccc;
+}
+.borderColor1 {
+  border-color: #FE6056;
+}
+.borderColor2 {
+  border-color: #F8BF32;
+}
+.borderColor3 {
+  border-color: #2AC83C;
+}
+.navigationArea {
+  width: 80%;
+  margin: 1.5rem;
+  padding: 1rem;
+}
+.navigationArea navigator {
+  color: #FE6056;
+  border-bottom: 1px solid #2AC83C;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}

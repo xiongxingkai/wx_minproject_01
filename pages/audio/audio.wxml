@@ -1,0 +1,18 @@
+<!--pages/audio/audio.wxml-->
+<page-meta>
+  <navigation-bar
+    title="{{nbTitle}}"
+    loading="{{nbLoading}}"
+    front-color="{{nbFrontColor}}"
+    background-color="{{nbBackgroundColor}}"
+    color-animation-duration="1500"
+    color-animation-timing-func="easeIn"
+  />
+</page-meta>
+<audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" binderror="handleError" 
+controls loop></audio>
+
+<button type="primary" bindtap="audioPlay">播放</button>
+<button type="primary" bindtap="audioPause">暂停</button>
+<button type="primary" bindtap="audio15">设置当前播放时间为15秒</button>
+<button type="primary" bindtap="audioStart">回到开头</button>

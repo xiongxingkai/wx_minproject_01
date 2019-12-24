@@ -1,13 +1,46 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/order/order",
+    "pages/editor/editor",
+    "pages/audio/audio",
+    "pages/camera/camera",
+    "pages/map/map"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundColor": "#0ff",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#07C160",
     "navigationBarTitleText": "凯凯商城",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "pageOrientation": "auto",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "backgroundColor": "#F3F3F3",
+    "color": "#000000",
+    "selectedColor": "#07C160",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/edit_success.png",
+        "selectedIconPath": "images/edit_success.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "iconPath": "images/close_02.png",
+        "selectedIconPath": "images/close_02.png",
+        "text": "登录日志"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "iconPath": "images/more.png",
+        "selectedIconPath": "images/more.png",
+        "text": "订单"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }
